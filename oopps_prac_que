@@ -1,0 +1,24 @@
+class Acc:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.acc_no = acc
+
+    def debit(self, amt):
+        self.balance -= amt  # Subtract amt from balance
+        print("Rs.", amt, "was debited")
+
+    def credit(self, amt):
+        self.balance += amt  # Add amt to balance
+        print("Rs.", amt, "was credited")
+
+    def get_bal(self):
+        return self.balance
+
+
+acc1 = Acc(10000, 12345)
+acc1.debit(1000)
+print("Current balance:", acc1.get_bal())
+acc1.credit(500)
+
+# Check balance
+print("Current balance:", acc1.get_bal())
